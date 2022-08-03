@@ -23,5 +23,5 @@ evt.getCMD({pattern: 'song$', fromMe: false, deleteCommand: false, desc: "get so
        const songbuttons = [
                                {buttonId: prefix +'dcsong ' + ytmsg.yuturl, buttonText: {displayText: 'DOCUMENT'}, type: 1}, 
                                {buttonId: prefix +'acsong ' + ytmsg.yuturl, buttonText: {displayText: 'AUDIO'}, type: 1}]
-       await message.client.sendMessage(message.jid, { image: {url: ytmsg.thumbnail }, caption: 'hi bro' /*ytmsg.songmsg , footer: 'pakaya' , buttons: songbuttons , headerType: 4*/ } , { quoted: message.data } )		
+       await message.client.sendMessage(message.jid, { image: {url: ytmsg.thumbnail }, caption: ytmsg.songmsg , footer: 'pakaya' , buttons: songbuttons , headerType: 4 } , { quoted: message.data } )		
 } }));
