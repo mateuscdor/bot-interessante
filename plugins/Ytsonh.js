@@ -11,8 +11,9 @@ const prefix = '.'
 
 evt.getCMD({pattern: 'song$', fromMe: false, deleteCommand: false, desc: "get songs froom youtube"}, (async (message, match) => {
      
-     if (!match[1]) return await message.client.sendMessage(message.jid , { text: "need word" }, { quoted: message.data } )
-     const link = match[1]
+   await message.client.sendMessage(message.jid , { text: "search result for faded" }, { quoted: message.data } )
+     
+     const link = 'faded'
        let ytmsg = await ytinfo(link)
        if (!ytmsg.thumbnail) {
        
